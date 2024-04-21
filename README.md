@@ -15,7 +15,9 @@ Builds the app for production to the `build` folder.
 ### Features
 Used React router for routing
 <br>
+<br>
 Used Redux toolkit for persisting the data
+<br>
 <br>
 Used ant design UI
 <br>
