@@ -15,15 +15,15 @@ const ProjectDetails = () => {
     const { projectId } = state;
     const dispatch = useDispatch();
 
-    const fetchStatus = useSelector((state) => state.projects.fetchStatus);
-    const projectDetails = useSelector((state) => state.projects.projectDetails);
+    const fetchStatus = useSelector((state: any) => state.projects.fetchStatus);
+    const projectDetails = useSelector((state: any) => state.projects.projectDetails);
 
     useEffect(() => {
         dispatch(resetTasksList());
         fetchProjectById(dispatch, projectId);
     }, []);
 
-    const getDateValue = (date) => {
+    const getDateValue = (date: string) => {
         if (date) {
             const newDate = new Date(date);
             return newDate.toDateString();

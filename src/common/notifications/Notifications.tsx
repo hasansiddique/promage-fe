@@ -3,6 +3,8 @@ import { message } from 'antd';
 import {useSelector} from "react-redux";
 
 const Notification: React.FC = () => {
+    const [messageApi, contextHolder] = message.useMessage();
+
     const type = useSelector((state: any) => state.notifications.type);
     const content = useSelector((state: any) => state.notifications.content);
 
@@ -14,7 +16,6 @@ const Notification: React.FC = () => {
             });
         }
     }, [type, content]);
-    const [messageApi, contextHolder] = message.useMessage();
 
     return (
         <>

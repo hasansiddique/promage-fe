@@ -11,8 +11,6 @@ import {
 } from 'antd';
 import {useDispatch, useSelector} from "react-redux";
 import type { FormProps, DatePickerProps } from 'antd';
-// @ts-ignore
-import { isEmpty } from 'lodash';
 import dayjs from 'dayjs';
 
 import { fetchAllManagers } from "../managers/managers.api";
